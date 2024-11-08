@@ -44,12 +44,13 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     # Ghi âm giọng nói
-    file_path = "data/recorded.wav"
-    record_voice(file_path)
+    # file_path = "data/recorded.wav"
+    # record_voice(file_path)
     
-    # Dự đoán giọng nói từ file đã ghi âm
-    result = predict_speaker_or_unknown(file_path)
-    return jsonify({'result': result})
+    # # Dự đoán giọng nói từ file đã ghi âm
+    # result = predict_speaker_or_unknown(file_path)
+    # return jsonify({'result': result})
+    return jsonify({'result': {"test": "asdg"}})
 
 # Hàm để ghi âm giọng nói
 def record_voice(file_path, seconds=5):
