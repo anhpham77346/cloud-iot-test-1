@@ -89,4 +89,4 @@ def record_voice(file_path, seconds=5):
     print("Ghi âm hoàn tất")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
